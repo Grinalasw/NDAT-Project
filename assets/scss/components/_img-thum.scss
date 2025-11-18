@@ -8,11 +8,13 @@
             background-color:rgba($color: $primary, $alpha: 0.05);
             @include css3-prefix('border-radius', '0');
             &.object-fit{
+                .thumbnail{
                 img,a,iframe{ 
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
                 }
+            }
             }
             .thumbnail {
                 margin: 0px;

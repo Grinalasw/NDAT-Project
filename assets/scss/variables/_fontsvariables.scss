@@ -1,15 +1,13 @@
 //  Font family Variables
-$ff-primary: 'Inter', sans-serif;
-$ff-secondary: 'Gelasio', serif;
+$ff-primary: "Poppins", sans-serif;
 
 // Font Family use class   
 .ff-primary{font-family: $ff-primary;}
-.ff-secondary{font-family: $ff-secondary;}
 
 // basic font size variable
-$fs-base: 16px;
-$fs-md: 14px;
-$fs-lg: 18px;
+$fs-base: 18px;
+$fs-md: 16px;
+$fs-lg: 20px;
 
 // basic font size class
 .fs-12{font-size: 12px !important;}
@@ -21,15 +19,15 @@ $fs-lg: 18px;
 .fs-20{font-size: 20px !important;}
 
 // heading font size variable
-$fs-h1:55px;
-$fs-h2:48px;
-$fs-h3:42px;
-$fs-h4:36px;
+$fs-h1:62px;
+$fs-h2:58px;
+$fs-h3:45px;
+$fs-h4:38px;
 $fs-h5:28px;
-$fs-h6:22px;
+$fs-h6:20px;
 
 // basic lineheight variable
-$lh-base: 130%;
+$lh-base: 167%;
 
 // Font Weight variable
 $fw-l: 300;

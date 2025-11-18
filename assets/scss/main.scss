@@ -1,29 +1,26 @@
 // library scss
-@import "../libraries/bootstrap/5.0.2/css/bootstrap.min.css";
-@import "../libraries/bootstrap/5.0.2/scss/functions";
-@import "../libraries/bootstrap/5.0.2/scss/variables";
-@import "../libraries/bootstrap/5.0.2/scss/mixins/breakpoints";
-@import "../libraries/fancybox/css/jquery.fancybox.min.css";
+@import "../libraries/bootstrap/css/bootstrap.min.css";
+@import "../libraries/bootstrap/scss/functions";
+@import "../libraries/bootstrap/scss/variables";
+@import "../libraries/bootstrap/scss/mixins/breakpoints";
 @import "../libraries/data-swiper-slider/css/swiper-bundle.min.css";
-@import "../libraries/aos/aos.css";
+@import "../libraries/fancybox/css/jquery.fancybox.min.css";
 
 // component scss
 @import "variables/variables";
 @import "mixin/css3mixins";
-@import "components/img-thum";
 @import "components/reset-css";
+@import "components/img-thum";
 @import "components/button";
-@import "components/accordion";
 @import "components/form";
 
 // section scss
-@import "section/header-section.scss";
-@import "section/banner-section.scss";
-@import "section/footer-section.scss";
+@import "section/header-section";
+@import "section/banner-section";
+@import "section/about-us-section";
+@import "section/overview-section";
+@import "section/footer-section";
 
 // page scss
-@import "pages/error-page.scss";
-@import "pages/thankyou-page.scss";
-body{
-    background: red !important;
-}
+@import "pages/error-page";
+@import "pages/thankyou-page";

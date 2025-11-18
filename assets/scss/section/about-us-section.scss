@@ -1,0 +1,111 @@
+.about-section{
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 560px;
+        height: 252px;
+        border-radius: 0 0 80px 0;
+        background-color: $primary;
+        background-image: url(../images/about-shape.png);
+        background-repeat: no-repeat;
+        background-position: top left;
+        z-index: -1;
+        @include media-breakpoint-down(xl){
+            width: 400px;
+        }
+        @include media-breakpoint-down(md){
+            width: 320px;
+            height: 145px;
+        }
+    }
+    @include media-breakpoint-up(xxl){
+     padding: 193px 0 150px 0 !important;
+    }
+    .img{
+        width: 648px;
+        margin-right: -101px;
+        @include media-breakpoint-down(xl){
+            width: 500px;
+            margin-right: -75px;
+        }
+        @include media-breakpoint-down(lg){
+            width:100%;
+            margin-right:0px;
+        }
+    }
+    .thumbnail-container{
+        border-radius: 20px;
+        padding-bottom: 66.667%;
+        &::after{
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: radial-gradient(50% 50% at 50% 50%, rgba($black, 0) 0%, rgba($black, 0.25) 100%);
+            @include css3-prefix(transition, 0.5s ease-in-out);
+        }
+        img{
+            @include css3-prefix(transition, 0.5s ease-in-out);
+        }
+        &:hover{
+            &::after{
+                opacity: 0;
+            }
+            img{
+                transform: scale(1.05);
+            }
+        }
+        @include media-breakpoint-down(md){
+            border-radius: 15px;
+        }
+        .btn-wrap{
+            position: absolute;
+            z-index: 1;
+            bottom: 37px;
+            right: 50px;
+            @include media-breakpoint-down(md){
+                bottom: 25px;
+                right: 25px;
+            }
+
+        }
+    }
+    .content{
+        border: 1px solid $primary;
+        border-radius: 20px;
+        padding: 85px 69px 85px 170px;
+        margin:0 0 37px 0;
+        @include media-breakpoint-down(xl){
+            padding: 60px 50px 60px 120px;
+        }
+        @include media-breakpoint-down(lg){
+            margin: 30px 0 0 0;
+            padding: 40px;
+        }
+        @include media-breakpoint-down(md){
+            border-radius: 15px;
+        }
+        @include media-breakpoint-down(sm){
+            padding: 30px;
+        }
+        p {
+            +p{
+            margin-top: 30px;
+            @include media-breakpoint-down(lg){
+                margin-top: 20px;
+            }
+            }
+        }
+        .main-title{
+            margin-bottom: 44px;
+            @include media-breakpoint-down(lg){
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

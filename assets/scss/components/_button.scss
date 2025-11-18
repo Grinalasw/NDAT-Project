@@ -1,175 +1,104 @@
 /* Button S */
-.btn{
+.btn {
     position: relative;
     font-family: $ff-primary;
     font-size: $fs-base;
-    font-weight: $fw-r;
-    line-height: 120%;
-    letter-spacing: 0.2px;
-    padding: 14px 27px;
+    font-weight: $fw-sb;
+    line-height: 112%;
+    padding: 16px 27px;
     border: none;
     box-shadow: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     z-index: 1;
-    border-radius: 30px;
+    border-radius: 100px;
     text-align: center;
     overflow: hidden;
-    &.btn-sm{
-        padding: 10px 20px;
+    @include css3-prefix(transition, 0.5s ease-in-out);
+    &:visited{
+        background: inherit;
     }
-    &.btn-lg{
-        padding: 18px 34px;
-        font-size: $fs-lg;
-        @include media-breakpoint-down(xl){
-            font-size: $fs-base;
-            padding: 14px 27px;
-        }
+    .icon {
+        display: inline-block;
+        margin-top: -2px;
     }
+
+    @include media-breakpoint-down(xl) {
+        padding: 12px 22px;
+        font-size: $fs-md;
+    }
+
     &:hover,
     &:focus,
-    &:visited,
-    &:active{
+    &:active {
         box-shadow: none !important;
     }
-    &.btn-primary, 
-    &.btn-secondary, 
-    &.btn-tertiary{
+
+    &.btn-primary,
+    &.btn-secondary {
         color: $white;
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0px;
-            left: auto;
-            right: 0px;
-            bottom: 0px;
-            width: 0px;
-            transition: all 0.5s ease-in-out;
-            height: 100%;
-            z-index: -1;
-            border-radius: inherit;
-            @include media-breakpoint-down(xl){
-                display: none;
-            }
-        }
-        &:not(:hover):visited{
+
+        &:not(:hover):visited {
             color: $white;
         }
-        &:hover,
-        &:focus,
-        &:visited,
-        &:active{
-            @include media-breakpoint-up(xl){
+
+        @include media-breakpoint-up(xl) {
+
+            &:hover,
+            &:focus,
+    
+            &:active {
                 color: $white;
-                &::before {
-                    left: 0px;
-                    width: 100%;
-                    right: auto;
-                }                
-            }
-        }
-    } 
-    &.btn-primary{
-        background-color: $primary;
-        &:hover,
-        &:focus,
-        &:visited,
-        &:active{
-            @include media-breakpoint-up(xl){
-                color: $white;
-                &::before {                
-                    background-color: $secondary;
-                }
             }
         }
     }
-    &.btn-secondary{
+
+    &.btn-primary {
         background-color: $secondary;
-        &:hover,
-        &:focus,
-        &:visited,
-        &:active{
-            @include media-breakpoint-up(xl){
+
+        @include media-breakpoint-up(xl) {
+
+            &:hover,
+            &:focus,
+    
+            &:active {
                 color: $white;
-                &::before {                
-                    background-color: $primary;
-                }
+                background-color: $primary;
             }
         }
     }
-    &.btn-tertiary{
-        background-color: $body;
-        &:hover,
-        &:focus,
-        &:visited,
-        &:active{
-            @include media-breakpoint-up(xl){
+
+    &.btn-secondary {
+        background-color: $primary;
+
+        @include media-breakpoint-up(xl) {
+
+            &:hover,
+            &:focus,
+    
+            &:active {
                 color: $white;
-                &::before {                
-                    background-color: $secondary;
-                }
+                background-color: $secondary;
             }
         }
     }
+
+    &.btn-white {
+        background-color: $white;
+
+        @include media-breakpoint-up(xl) {
+
+            &:hover,
+            &:focus,
+    
+            &:active {
+                color: $body;
+                background: $primary;
+            }
+        }
+    }
+
 }
-.btn-link {
-    font-weight: $fw-m;
-    font-size: $fs-lg;
-    color: $primary;
-    display: inline-block;
-    text-decoration: none !important;
-    @include media-breakpoint-down(xxl) {
-        font-size: $fs-base;
-    }
-    &:hover,&:focus,&:active {
-        color: $secondary;
-        i{
-        svg, path{
-            fill: $secondary;
-        }
-        }
-    }
-    i {
-        display: inline-block;
-        margin-right: 10px;
-        @include css3-prefix('transform',translateZ(0));
-        svg {
-            fill: $primary;              
-            path {
-            fill: $primary; 
-            }
-        }
-        @include media-breakpoint-down(xxl) {
-            margin-right: 10px;
-        }
-    }
-    @media (min-width:1199px) {
-        i {
-            svg {
-                @include css3-prefix ('transition','all 0.5s linear');
-                @include css3-prefix ('transform-origin',center center);
-            }                
-        }
-        &:hover {                
-            i {
-                svg {
-                    @include css3-prefix('transform',rotate(180deg) translateZ(0));
-                }                    
-            }
-        }
-    }
-    &.btn-link-secondary {
-        color: $secondary;
-        &:hover,&:focus,&:active {
-        color: $secondary;
-        }
-        i {
-        svg {
-            fill: $secondary;              
-            path {
-            fill: $secondary; 
-            }
-        }
-        }
-    }
-}
+
 /* Button E */
