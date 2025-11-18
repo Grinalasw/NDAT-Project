@@ -1,70 +1,162 @@
-.overview-section{
-    .overview-wrap{
-    padding: 63px 83px;
-    background: $primary;
-    border-radius: 20px;
+.overview-section {
+    @include media-breakpoint-up(xxl) {
+        &.double-gap-b {
+            padding-bottom: 224px !important;
+        }
     }
-    .sec-title{
+
+    .overview-wrap {
+        padding: 63px 83px;
+        background-color: $primary;
+        border-radius: 20px;
+        background-image: url(../images/overview-bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+
+        @include media-breakpoint-down(lg) {
+            padding: 50px;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: 30px 35px;
+        }
+    }
+
+    .sec-title {
         margin-top: 36px;
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 25px;
+        }
     }
-    .main-title{
-        color:$tertiary;
+
+    .main-title {
+        color: $tertiary;
         position: relative;
         margin-bottom: 34px;
-        span{
-            color:$tertiary;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 15px;
         }
-        &::after{
+
+        span {
+            color: $tertiary;
+        }
+
+        &::after {
             content: "";
             position: absolute;
-            height:calc(100% - 8px);
+            height: calc(100% - 8px);
             border: 2px solid $white;
             left: -30px;
             top: 50%;
             transform: translateY(-50%);
+
+            @include media-breakpoint-down(lg) {
+                left: -20px;
+            }
+
+            @include media-breakpoint-down(md) {
+                left: -15px;
+            }
         }
-        @include media-breakpoint-up(xxl){
+
+        @include media-breakpoint-up(xxl) {
             font-size: $fs-h1;
         }
+
     }
-    .box{
+
+    .box {
         display: flex;
         border-bottom: 2px solid #53B96A;
         padding-bottom: 42px;
-        li{
+
+        @include media-breakpoint-down(lg) {
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-bottom: 25px;
+        }
+
+        li {
             display: flex;
             flex-direction: column;
             padding-bottom: 10px;
-            &:nth-child(1){
+
+            &:nth-child(1) {
                 padding-right: 46px;
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
                 padding-right: 50px;
                 padding-left: 50px;
             }
-            &:nth-child(3){
+
+            &:nth-child(3) {
                 flex-grow: 1;
             }
-            &:nth-last-child(1){
+
+            &:nth-last-child(1) {
                 padding-left: 57px;
             }
-            +li{
-                border-left: 1px solid #69C17D;
+
+            @include media-breakpoint-down(xl) {
+                &:nth-child(1) {
+                    padding-right: 30px;
+                }
+
+                &:nth-child(2) {
+                    padding-right: 30px;
+                    padding-left: 30px;
+                }
+
+                &:nth-child(3) {
+                    flex-grow: 1;
+                }
+
+                &:nth-last-child(1) {
+                    padding-left: 30px;
+                }
             }
-            .sm-title{
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+                padding: 0 0 0 0 !important;
+                border: none !important;
+            }
+
+            +li {
+                border-left: 1px solid #69C17D;
+
+                @include media-breakpoint-down(lg) {
+                    border-left: none !important;
+                    border-top: 1px solid #69C17D !important;
+                    padding-top: 10px !important;
+                }
+            }
+
+            .sm-title {
                 font-weight: $fw-l;
             }
-            .sm-desc{
+
+            .sm-desc {
                 font-size: 22px;
+
+                @include media-breakpoint-down(lg) {
+                    font-size: $fs-h6;
+                }
             }
         }
     }
-    .list-desc{
-        li{
+
+    .list-desc {
+        li {
             color: $white;
             position: relative;
             padding-left: 16px;
-            &::before{
+
+            &::before {
                 content: "";
                 position: absolute;
                 top: 12px;
@@ -72,8 +164,9 @@
                 height: 5px;
                 width: 5px;
                 background: $white;
-            }            
-            +li{
+            }
+
+            +li {
                 margin-top: 5px;
             }
         }
